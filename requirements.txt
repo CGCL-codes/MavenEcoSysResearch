@@ -1,0 +1,5 @@
+interruptingcow==0.8
+numpy==1.19.5
+matplotlib==3.5.1
+networkx==2.6.3
+requests==2.28.1
