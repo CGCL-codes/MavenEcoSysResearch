@@ -46,7 +46,7 @@ CVE | Upstream_GAV | Downstream_GAV | Downstream_repo | Downstream_commit
 
 ## Call Stack
 
-The *call_stack* folder contains files that detail both direct and transitive access between upstream and downstream pairs. Each file's content are call traces, formatted as follows: for transitive calls, the sequence is "Downstream caller -> Upstream entry function -> ... -> Vulnerable function." For direct calls, the 'Upstream entry function' is identical to the 'Vulnerable function.'
+The *call_stack* folder contains files that detail both direct and transitive access between upstream and downstream pairs. Each file's content are call traces, formatted as follows: for transitive calls, the sequence is *"Downstream caller -> Upstream entry function -> ... -> Vulnerable function."* For direct calls, the *'Upstream entry function'* is identical to the *'Vulnerable function.'*
 
 Please be aware that a single call_stack file may include multiple lines, each representing a different ICFG path.
 
