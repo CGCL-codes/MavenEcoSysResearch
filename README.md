@@ -1,4 +1,4 @@
-# Data description
+# Data Description
 
 ## Overview
 
@@ -6,7 +6,7 @@ The following figure shows various metadata of the collected dataset, and more d
 
 ![data_overview](plot_script/data_collection/data_overview.png)
 
-## Artifact and vulnerability
+## Artifact and Vulnerability
 
 The information and structure of each table is as follows:
 
@@ -36,12 +36,24 @@ The information and structure of each table is as follows:
 
 This dataset contains CVEs and the detailed information of the corresponding patches and affected artifacts.
 
-## Downstream response
+## Downstream Response
 
 Downstream response is hold in response.csv file and the structure is as follows:
 
 ```
 CVE | Upstream_GAV | Downstream_GAV | Downstream_repo | Downstream_commit
+```
+
+## Call Stack
+
+The *call_stack* folder contains files that detail both direct and transitive access between upstream and downstream pairs. Each file's content are call traces, formatted as follows: for transitive calls, the sequence is "Downstream caller -> Upstream entry function -> ... -> Vulnerable function." For direct calls, the 'Upstream entry function' is identical to the 'Vulnerable function.'
+
+Please be aware that a single call_stack file may include multiple lines, each representing a different ICFG path.
+
+The file follows this naming convention:
+
+```
+CVE @ Upstream_GAV @ Downstream_GAV @ DIR_ACC/TRAN_ACC
 ```
 
 ## Plot Script
